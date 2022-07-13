@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: counter-deployment
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: counter-deployment
+  template:
+    metadata:
+      labels:
+        app: counter-deployment
+    spec:
+      containers:
+      - image: sasmita25/counter
+        name: counter-deployment
+        ports:
+        - containerPort: 80
