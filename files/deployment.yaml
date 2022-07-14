@@ -14,7 +14,7 @@ spec:
         app: counter-deployment
     spec:
       containers:
-      - image: sasmita25/counter
+      - image: sasmita25/counter:latest
         name: counter-deployment
         ports:
         - containerPort: 80
