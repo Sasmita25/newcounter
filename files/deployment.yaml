@@ -3,15 +3,14 @@ kind: Deployment
 metadata:
   name: counter-deployment
 spec:
-  replicas: 1
-  revisionHistoryLimit: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: counter-deployment
+      run: counter-deployment
   template:
     metadata:
       labels:
-        app: counter-deployment
+        run: counter-deployment
     spec:
       containers:
       - image: sasmita25/counter
